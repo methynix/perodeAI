@@ -1,0 +1,66 @@
+/* app/globals.css */
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #003366;
+  --color-cyan: #00E0FF;
+  --color-offwhite: #F2F2F2;
+}
+
+body {
+  @apply bg-offwhite text-navy font-sans selection:bg-cyan selection:text-navy;
+  font-size: clamp(10px, 4vw, 16px);
+}
+
+/* Add to your global CSS file */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes morph {
+  0%, 100% { border-radius: 60% 40% 50% 50% / 45% 50% 50% 55%; }
+  50% { border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%; }
+}
+
+@keyframes morph2 {
+  0%, 100% { border-radius: 40% 60% 45% 55% / 55% 40% 60% 45%; }
+  50% { border-radius: 55% 45% 60% 40% / 45% 50% 40% 60%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%) rotate(45deg); }
+  100% { transform: translateY(100%) rotate(45deg); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+/* Tailwind utilities for custom animations */
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spinReverse 12s linear infinite;
+}
+
+.animate-scan {
+  animation: scan 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
