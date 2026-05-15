@@ -5,7 +5,7 @@ import { PERSONAL_INFO, ABOUT_DATA } from './data/portfolio';
 
 export default function Home() {
   return (
-    <section className="relative py-16 sm:py-20 md:py-24 lg:py-32 xl:py-40 bg-white overflow-hidden min-h-[calc(100vh-80px)] flex items-center">
+    <section className="relative py-16 sm:py-20 md:py-24 lg:py-32 xl:py-40 overflow-hidden min-h-[calc(100vh-80px)] flex items-center">
       <div className="absolute top-[-10%] right-[-5%] w-125 h-125 rounded-full bg-cyan opacity-10 blur-[100px]"></div>
       <div className="absolute bottom-[-10%] left-[-5%] w-100 h-100 rounded-full bg-white opacity-5 blur-[80px]"></div>
 
