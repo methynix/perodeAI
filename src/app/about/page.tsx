@@ -11,8 +11,9 @@ export default function About() {
         </div>
         <div className="lg:w-2/3 space-y-8 text-lg text-navy/80 leading-relaxed">
           <p><strong className="text-navy">My Goal:</strong> {ABOUT_DATA.goals}</p>
-          <p><strong className="text-navy">Working Style:</strong> {ABOUT_DATA.style}</p>
+          <p><strong className="text-navy">Why I actually care?:</strong> {ABOUT_DATA.why}</p>
           <p><strong className="text-navy">Personality:</strong> {ABOUT_DATA.personality}</p>
+          <p><strong className="text-navy">My Story:</strong> {ABOUT_DATA.story}</p>
           
           <div className="pt-6">
             <h4 className="text-navy font-bold mb-4">Core Competencies:</h4>

@@ -11,34 +11,32 @@ export default function Home() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 w-full">
         
-        {/* Left Column: Text Content */}
         <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start mt-10 lg:mt-0">
-          <p className="text-cyan font-mono mb-4 tracking-wider">Hello, I am {PERSONAL_INFO.fullName}</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight mb-6 tracking-tight">
-            Data Scientist for <br/>
-            <span className="text-cyan">
-              E-commerce.
-            </span>
-          </h2>
-          <p className="text-gray-700 text-lg lg:text-xl mb-10 max-w-2xl leading-relaxed">
-            {ABOUT_DATA.focus}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full sm:w-auto">
-            <Link href="/projects" className="px-8 py-4 bg-cyan text-navy font-bold rounded-lg hover:bg-white hover:-translate-y-1 transition-all duration-300 shadow-[0_0_20px_rgba(0,224,255,0.4)] text-center">
-              View AI Models
-            </Link>
-            <Link href="/contact" className="px-8 py-4 border border-cyan text-cyan font-bold rounded-lg hover:bg-cyan/10 transition-all duration-300 text-center">
-              Contact Me
-            </Link>
-          </div>
-        </div>
+  <p className="text-cyan font-mono mb-4 text-sm sm:text-base tracking-wider uppercase">
+    
+  </p>
+  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
+     Stop Losing 15-40% Of Your Revenue To{" "}
+    <span className="text-cyan block sm:inline">
+       Silent Customer Churn Before It Hits Your Dashboard!
+    </span>
+  </h2>
+  <p className="text-gray-700 text-base sm:text-lg mb-8 max-w-2xl">
+    {ABOUT_DATA.focus}
+  </p>
+  <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full sm:w-auto">
+    <Link href="/projects" className="px-6 sm:px-8 py-3 sm:py-4 bg-cyan text-navy font-semibold rounded-lg hover:bg-white hover:-translate-y-1 transition-all duration-300 shadow-[0_0_20px_rgba(0,224,255,0.4)] text-center">
+      View AI Models
+    </Link>
+    <Link href="/contact" className="px-6 sm:px-8 py-3 sm:py-4 border border-cyan text-cyan font-semibold rounded-lg hover:bg-cyan/10 transition-all duration-300 text-center">
+      Request a blind data audit
+    </Link>
+  </div>
+</div>
 
-       {/* Right Column: Decorated ML Image */}
 <div className="flex-1 flex justify-center lg:justify-end relative w-full pb-10 lg:pb-0">
   
-  {/* Main animated container - elliptical/rotating rings */}
   <div className="relative z-20 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-112.5 xl:h-112.5 group">
-    {/* Outer rotating ring - elliptical */}
     <div className="absolute inset-0 rounded-full animate-spin-slow" style={{ 
       background: 'conic-gradient(from 0deg, transparent, #00e0ff, transparent, #00e0ff, transparent)',
       padding: '3px',

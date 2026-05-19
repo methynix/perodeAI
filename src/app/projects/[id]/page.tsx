@@ -25,9 +25,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
         
         <div className="p-10">
           <h2 className="text-sm font-bold text-cyan tracking-widest uppercase mb-4">Model Intelligence Report</h2>
-          <p className="text-navy text-lg leading-relaxed mb-10 border-l-4 border-cyan pl-6 bg-offwhite/50 py-4 pr-4 rounded-r-lg">
-            {project.report}
-          </p>
+          <div className="text-navy text-base lg:text-lg leading-relaxed mb-10 border-l-4 border-cyan pl-6 bg-offwhite/50 py-6 pr-4 rounded-r-lg">
+  {project.report}
+</div>
 
           <div className="mb-10">
             <h3 className="text-lg font-bold text-navy mb-4">Core Technology Stack:</h3>
