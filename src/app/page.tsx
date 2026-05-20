@@ -17,9 +17,7 @@ export default function Home() {
   </p>
   <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
      Stop Losing 15-40% Of Your Revenue To{" "}
-    <span className="text-cyan block sm:inline">
        Silent Customer Churn Before It Hits Your Dashboard!
-    </span>
   </h2>
   <p className="text-gray-700 text-base sm:text-lg mb-8 max-w-2xl">
     {ABOUT_DATA.focus}
