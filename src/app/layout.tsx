@@ -1,6 +1,27 @@
 import './globals.css';
+import { Space_Grotesk, Inter, IBM_Plex_Mono } from 'next/font/google';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+
+const display = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--ff-display',
+  display: 'swap',
+});
+
+const body = Inter({
+  subsets: ['latin'],
+  variable: '--ff-body',
+  display: 'swap',
+});
+
+const mono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--ff-mono',
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'Perode | AI Predictive Models',
@@ -13,8 +34,8 @@ export const icons = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="pt-20 flex flex-col min-h-screen">
+    <html lang="en" className={`scroll-smooth ${display.variable} ${body.variable} ${mono.variable}`}>
+      <body className="min-h-screen flex flex-col antialiased">
         <Navbar />
         <main className="grow">{children}</main>
         <Footer />

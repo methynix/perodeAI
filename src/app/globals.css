@@ -1,66 +1,98 @@
-/* app/globals.css */
 @import "tailwindcss";
 
 @theme {
+  --color-canvas: #eef2f5;
+  --color-canvas-2: #e6ebef;
+  --color-paper: #f7f9fb;
+  --color-ink: #0e2233;
+  --color-ink-soft: #4a5d6e;
   --color-navy: #003366;
-  --color-cyan: #00E0FF;
+  --color-navy-900: #022146;
+  --color-cyan: #00e0ff;
+  --color-cyan-ink: #0a7d99;
   --color-offwhite: #F2F2F2;
+  --color-line: rgba(14, 34, 51, 0.14);
+  --color-line-strong: rgba(14, 34, 51, 0.28);
+  --color-grid: rgba(14, 34, 51, 0.05);
+
+  --font-sans: var(--ff-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--ff-display), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--ff-mono), ui-monospace, "SFMono-Regular", monospace;
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
-  @apply bg-offwhite text-navy font-sans selection:bg-cyan selection:text-navy;
-  font-size: clamp(10px, 4vw, 16px);
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* Add to your global CSS file */
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+::selection {
+  background: var(--color-cyan);
+  color: var(--color-navy);
 }
 
-@keyframes spinReverse {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 2px;
 }
 
-@keyframes morph {
-  0%, 100% { border-radius: 60% 40% 50% 50% / 45% 50% 50% 55%; }
-  50% { border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%; }
+.font-display {
+  font-feature-settings: "ss01" 1;
+  letter-spacing: -0.02em;
 }
 
-@keyframes morph2 {
-  0%, 100% { border-radius: 40% 60% 45% 55% / 55% 40% 60% 45%; }
-  50% { border-radius: 55% 45% 60% 40% / 45% 50% 40% 60%; }
+.grid-paper {
+  background-image:
+    linear-gradient(to right, var(--color-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-grid) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(2deg); }
+.eyebrow {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
 }
 
-@keyframes scan {
-  0% { transform: translateY(-100%) rotate(45deg); }
-  100% { transform: translateY(100%) rotate(45deg); }
+@media (prefers-reduced-motion: no-preference) {
+  .forecast-actual {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: forecastDraw 1.7s cubic-bezier(0.45, 0, 0.1, 1) 0.1s forwards;
+  }
+  .forecast-predicted {
+    opacity: 0;
+    animation: forecastFade 0.9s ease-out 1.4s forwards;
+  }
+  .forecast-band {
+    opacity: 0;
+    animation: forecastFade 0.9s ease-out 1.5s forwards;
+  }
+  .forecast-tip {
+    opacity: 0;
+    animation: forecastFade 0.5s ease-out 2.1s forwards;
+  }
 }
 
-@keyframes pulse-slow {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.1); }
+@keyframes forecastDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
-/* Tailwind utilities for custom animations */
-.animate-spin-slow {
-  animation: spin 8s linear infinite;
-}
-
-.animate-spin-reverse-slow {
-  animation: spinReverse 12s linear infinite;
-}
-
-.animate-scan {
-  animation: scan 3s ease-in-out infinite;
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 4s ease-in-out infinite;
+@keyframes forecastFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
