@@ -7,7 +7,7 @@ export const BRAND = {
 };
 
 export const PERSONAL_INFO = {
-  fullName: "Francis Mwaseba",
+  fullName: "Francis Mwaceber",
   title: "Data Scientist",
   location: "Dar Es Salaam, Tanzania",
   email: "mwaceberfrancis@gmail.com",
