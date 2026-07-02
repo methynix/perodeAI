@@ -26,7 +26,7 @@ const mono = IBM_Plex_Mono({
 
 export const metadata :Metadata= {
   title: 'Perode | AI Predictive Models',
-  description: 'Data scientist specializing in predictive AI for e-commerce. Explore machine learningmodels that drive sales, optimize inventory, and personalize customer experiences',
+  description: 'Data scientist in Dar es Salaam building predictive AI for e-commerce — customer churn, pricing, and demand forecasting models that protect your revenue.Predictive models for e-commerce brands: catch churn 60 days early, cut dead stock, and forecast demand. See real case studies from data scientist Francis Mwaseba.',
   verification:{
     google:"f1QithqTVKQkNfiz7R9XvvDF_H0_UTofImZtH-fUWl0" 
   }
