@@ -1,4 +1,5 @@
 import './globals.css';
+import type {Metadata} from "next";
 import { Space_Grotesk, Inter, IBM_Plex_Mono } from 'next/font/google';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -23,9 +24,12 @@ const mono = IBM_Plex_Mono({
   display: 'swap',
 });
 
-export const metadata = {
+export const metadata :Metadata= {
   title: 'Perode | AI Predictive Models',
   description: 'Data scientist specializing in predictive AI for e-commerce. Explore machine learningmodels that drive sales, optimize inventory, and personalize customer experiences',
+  verification:{
+    google:"f1QithqTVKQkNfiz7R9XvvDF_H0_UTofImZtH-fUWl0" 
+  }
 };
 
 export const icons = {
